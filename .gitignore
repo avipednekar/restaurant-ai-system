@@ -6,16 +6,14 @@ backend-springboot/.mvn/
 backend-springboot/mvnw
 backend-springboot/mvnw.cmd
 
-# ===== Node / React =====
+# ===== Node / React (Vite) =====
 frontend-react/node_modules/
-frontend-react/build/
+frontend-react/dist/
 frontend-react/.env.local
 frontend-react/.env.development.local
 frontend-react/.env.test.local
 frontend-react/.env.production.local
 frontend-react/npm-debug.log*
-frontend-react/yarn-debug.log*
-frontend-react/yarn-error.log*
 
 # ===== Python =====
 ml-service-python/__pycache__/

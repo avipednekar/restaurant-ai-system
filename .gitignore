@@ -1,0 +1,43 @@
+# ===== Java / Spring Boot =====
+backend-springboot/target/
+backend-springboot/*.jar
+backend-springboot/*.war
+backend-springboot/.mvn/
+backend-springboot/mvnw
+backend-springboot/mvnw.cmd
+
+# ===== Node / React =====
+frontend-react/node_modules/
+frontend-react/build/
+frontend-react/.env.local
+frontend-react/.env.development.local
+frontend-react/.env.test.local
+frontend-react/.env.production.local
+frontend-react/npm-debug.log*
+frontend-react/yarn-debug.log*
+frontend-react/yarn-error.log*
+
+# ===== Python =====
+ml-service-python/__pycache__/
+ml-service-python/**/__pycache__/
+ml-service-python/*.pyc
+ml-service-python/.env
+ml-service-python/venv/
+ml-service-python/.venv/
+ml-service-python/models/*.pkl
+ml-service-python/models/*.joblib
+ml-service-python/data/*.csv
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== General =====
+*.log
+*.tmp
+.env

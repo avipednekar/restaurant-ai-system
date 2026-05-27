@@ -1,0 +1,86 @@
+RecipeName,IngredientName,Quantity,Unit,IngredientCategory
+Vadapav,Pav (Bread Bun),1,piece,Bakery
+Vadapav,Boiled Potato,100,grams,Produce
+Vadapav,Besan (Gram Flour),30,grams,Dry Goods
+Vadapav,Green Chili,5,grams,Produce
+Vadapav,Ginger-Garlic Paste,5,grams,Spices
+Vadapav,Mustard Seeds,2,grams,Spices
+Vadapav,Turmeric Powder,1,grams,Spices
+Vadapav,Coriander Leaves,5,grams,Produce
+Vadapav,Oil (Frying),30,ml,Oil
+Vadapav,Dry Garlic Chutney,10,grams,Prepared
+Panipuri,Puri Shells,6,pieces,Dry Goods
+Panipuri,Boiled Potato,40,grams,Produce
+Panipuri,Boiled Chickpeas,20,grams,Legumes
+Panipuri,Sprouted Moong,15,grams,Legumes
+Panipuri,Mint Water (Pudina Pani),80,ml,Prepared
+Panipuri,Tamarind Chutney,20,ml,Prepared
+Panipuri,Chaat Masala,3,grams,Spices
+Panipuri,Onion (Chopped),20,grams,Produce
+Panipuri,Black Salt,1,grams,Spices
+Frankie,Roti/Paratha,1,piece,Bakery
+Frankie,Paneer (Filling),50,grams,Dairy
+Frankie,Onion (Sliced),30,grams,Produce
+Frankie,Capsicum (Sliced),20,grams,Produce
+Frankie,Green Chutney,15,ml,Prepared
+Frankie,Chaat Masala,2,grams,Spices
+Frankie,Lemon Juice,5,ml,Produce
+Frankie,Butter,10,grams,Dairy
+Frankie,Oil,5,ml,Oil
+Sandwich,Bread Slices,2,pieces,Bakery
+Sandwich,Butter,10,grams,Dairy
+Sandwich,Green Chutney,10,ml,Prepared
+Sandwich,Tomato (Sliced),30,grams,Produce
+Sandwich,Cucumber (Sliced),20,grams,Produce
+Sandwich,Onion (Sliced),20,grams,Produce
+Sandwich,Boiled Potato (Sliced),40,grams,Produce
+Sandwich,Capsicum (Sliced),15,grams,Produce
+Sandwich,Chaat Masala,2,grams,Spices
+Sandwich,Cheese Slice,1,piece,Dairy
+Aalopuri,Puri (Fried),4,pieces,Bakery
+Aalopuri,Boiled Potato (Mashed),100,grams,Produce
+Aalopuri,Onion (Chopped),20,grams,Produce
+Aalopuri,Coriander Leaves,5,grams,Produce
+Aalopuri,Tamarind Chutney,15,ml,Prepared
+Aalopuri,Sev (Garnish),10,grams,Dry Goods
+Aalopuri,Chaat Masala,3,grams,Spices
+Aalopuri,Green Chili,3,grams,Produce
+Cold coffee,Coffee Powder,10,grams,Beverages
+Cold coffee,Milk,200,ml,Dairy
+Cold coffee,Sugar,20,grams,Grocery
+Cold coffee,Ice Cubes,4,pieces,Frozen
+Cold coffee,Chocolate Syrup,10,ml,Beverages
+Cold coffee,Vanilla Ice Cream,30,grams,Frozen
+Sugarcane juice,Sugarcane,500,grams,Produce
+Sugarcane juice,Ginger,5,grams,Produce
+Sugarcane juice,Lemon Juice,10,ml,Produce
+Sugarcane juice,Ice,100,grams,Frozen
+Sugarcane juice,Mint Leaves,3,grams,Produce
+Burgers,Burger Bun,1,piece,Bakery
+Burgers,Chicken Patty,120,grams,Meat
+Burgers,Lettuce,15,grams,Produce
+Burgers,Tomato (Sliced),20,grams,Produce
+Burgers,Onion (Sliced),15,grams,Produce
+Burgers,Cheese Slice,1,piece,Dairy
+Burgers,Mayonnaise,15,ml,Prepared
+Burgers,Ketchup,10,ml,Prepared
+Burgers,Pickle,5,grams,Prepared
+Chicken Sandwiches,Bread Slices,2,pieces,Bakery
+Chicken Sandwiches,Grilled Chicken,100,grams,Meat
+Chicken Sandwiches,Lettuce,10,grams,Produce
+Chicken Sandwiches,Tomato (Sliced),20,grams,Produce
+Chicken Sandwiches,Mayonnaise,15,ml,Prepared
+Chicken Sandwiches,Cheese Slice,1,piece,Dairy
+Chicken Sandwiches,Butter,10,grams,Dairy
+Fries,Potato (Cut),200,grams,Produce
+Fries,Oil (Deep Frying),100,ml,Oil
+Fries,Salt,3,grams,Spices
+Fries,Ketchup,15,ml,Prepared
+Beverages,Tea/Coffee Base,10,grams,Beverages
+Beverages,Milk,150,ml,Dairy
+Beverages,Sugar,15,grams,Grocery
+Beverages,Water,200,ml,Water
+Sides & Other,Mixed Vegetables,80,grams,Produce
+Sides & Other,Oil,20,ml,Oil
+Sides & Other,Spice Mix,5,grams,Spices
+Sides & Other,Bread/Base,1,piece,Bakery

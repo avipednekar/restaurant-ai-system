@@ -269,10 +269,25 @@ def insert_menu_items(engine, sales_df, balaji_df):
     all_items = pd.concat([items_sales, items_balaji], ignore_index=True)
     all_items = all_items.drop_duplicates("item_name")
 
-    all_items[["item_name", "category", "subcategory", "item_type", "price", "is_available"]].to_sql(
-        "menu_items", engine, if_exists="append", index=False
-    )
-    print(f"   -> Inserted {len(all_items)} menu items")
+    # Fetch existing items from the database to avoid duplicate key errors
+    try:
+        with engine.connect() as conn:
+            existing_items = pd.read_sql("SELECT item_name, category FROM menu_items", conn)
+        
+        if not existing_items.empty:
+            merged = all_items.merge(existing_items, on=["item_name", "category"], how="left", indicator=True)
+            all_items = merged[merged["_merge"] == "left_only"].drop(columns=["_merge"])
+    except Exception:
+        pass
+
+    if not all_items.empty:
+        all_items[["item_name", "category", "subcategory", "item_type", "price", "is_available"]].to_sql(
+            "menu_items", engine, if_exists="append", index=False
+        )
+        print(f"   -> Inserted {len(all_items)} new menu items")
+    else:
+        print("   -> No new menu items to insert")
+        
     return all_items
 
 

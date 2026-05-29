@@ -167,7 +167,26 @@ CREATE TABLE IF NOT EXISTS ml_features (
 ) ENGINE=InnoDB;
 
 -- ============================================================
--- 9. INDEXES FOR PERFORMANCE
+-- 9. INVENTORY PREDICTIONS  (Waste Optimization Output)
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS inventory_predictions (
+    id                          INT AUTO_INCREMENT PRIMARY KEY,
+    inventory_item_name         VARCHAR(100) NOT NULL COMMENT 'Name of the inventory ingredient',
+    prediction_date             DATE NOT NULL,
+    current_stock               DECIMAL(10,2) DEFAULT NULL,
+    daily_usage                 DECIMAL(10,2) DEFAULT NULL,
+    predicted_waste_percentage  DECIMAL(5,2) NOT NULL,
+    action_recommended          VARCHAR(100) DEFAULT NULL COMMENT 'e.g. Reduce Reorder Level, Stock is Optimal',
+    model_name                  VARCHAR(50) DEFAULT 'RandomForest',
+    model_version               VARCHAR(20) DEFAULT NULL,
+    actual_waste_percentage     DECIMAL(5,2) DEFAULT NULL COMMENT 'Filled in after actual data is available',
+    created_at                  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY uq_inv_prediction (inventory_item_name, prediction_date, model_name)
+) ENGINE=InnoDB;
+
+-- ============================================================
+-- 10. INDEXES FOR PERFORMANCE
 -- ============================================================
 
 CREATE INDEX idx_orders_date ON orders(order_date);
@@ -177,3 +196,5 @@ CREATE INDEX idx_inventory_item ON inventory(item_name);
 CREATE INDEX idx_predictions_date ON predictions(prediction_date);
 CREATE INDEX idx_ml_features_date ON ml_features(sale_date);
 CREATE INDEX idx_ml_features_item ON ml_features(menu_item_id);
+CREATE INDEX idx_inv_predictions_date ON inventory_predictions(prediction_date);
+CREATE INDEX idx_inv_predictions_item ON inventory_predictions(inventory_item_name);

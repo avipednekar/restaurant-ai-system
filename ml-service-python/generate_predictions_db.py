@@ -107,8 +107,13 @@ def generate_predictions():
                 "actual_quantity": float(row["quantity_sold"])
             })
             
-        # Bulk Insert (using ON DUPLICATE KEY UPDATE to avoid constraints issues)
-        print("Inserting demand predictions into MySQL...")
+        # Deduplicate to prevent IntegrityError (Duplicate entry for uq_prediction)
+        df_records = pd.DataFrame(prediction_records)
+        df_records = df_records.drop_duplicates(subset=["menu_item_id", "prediction_date", "model_name"], keep="last")
+        prediction_records = df_records.to_dict('records')
+            
+        # Bulk Insert
+        print(f"Inserting {len(prediction_records)} deduplicated demand predictions into MySQL...")
         with engine.begin() as conn:
             # Clear old predictions to avoid duplicate key issues if needed, or do it gracefully
             conn.execute(text("DELETE FROM predictions WHERE model_name = 'XGBoost'"))
@@ -181,8 +186,13 @@ def generate_predictions():
                 "actual_waste_percentage": float(row["waste_pct"])
             })
             
+        # Deduplicate to prevent IntegrityError
+        df_inv_records = pd.DataFrame(inv_prediction_records)
+        df_inv_records = df_inv_records.drop_duplicates(subset=["inventory_item_name", "prediction_date", "model_name"], keep="last")
+        inv_prediction_records = df_inv_records.to_dict('records')
+            
         # Bulk Insert
-        print("Inserting inventory predictions into MySQL...")
+        print(f"Inserting {len(inv_prediction_records)} deduplicated inventory predictions into MySQL...")
         with engine.begin() as conn:
             conn.execute(text("DELETE FROM inventory_predictions WHERE model_name = 'RandomForest'"))
             
